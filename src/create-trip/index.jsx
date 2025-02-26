@@ -170,7 +170,7 @@ function CreateTrip() {
                             handleInputChange('people', items.people)
                             handleInputChange('name', items.name);
                         }}
-                            className={`border rounded-xl p-4 hover:shadow-lg ${formData?.people === items.people ? 'shadow-xl border-black' : ''
+                            className={`border rounded-xl p-4 hover:shadow-lg ${formData?.people === items.people ? 'shadow-xl border-black'  : ''
                                 }`}
 
                         >
