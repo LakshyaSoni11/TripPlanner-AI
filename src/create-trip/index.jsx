@@ -15,8 +15,6 @@ import {
 } from "@/components/ui/dialog";
 import { FaGoogle } from "react-icons/fa";
 import { useGoogleLogin } from '@react-oauth/google';
-import backImg from '/public/backImg.jpg';
-// import { error } from 'console';
 import axios from 'axios';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { doc, setDoc } from "firebase/firestore";
