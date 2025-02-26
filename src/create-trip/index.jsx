@@ -154,7 +154,7 @@ function CreateTrip() {
                         <div key={index}
                             onClick={() => handleInputChange('budget', items.title)}
                             className={`border rounded-xl p-4 hover:shadow-lg
-                            ${formData?.budget === items.title ? 'shadow-lg border-black' : ''}
+                            ${formData?.budget === items.title ? 'shadow-xl border-black' : ''}
                             `}>
                             <img src='/money.png' alt='money icon' className='h-20 ml-50'></img>
                             <h2 className='font-bold capitalize text-2xl flex items-center gap-2 mb-2'>{items.icon} {items.title} </h2>
@@ -172,7 +172,7 @@ function CreateTrip() {
                             handleInputChange('people', items.people)
                             handleInputChange('name', items.name);
                         }}
-                            className={`border rounded-xl p-4 hover:shadow-lg ${formData?.people === items.people ? 'shadow-lg border-black' : ''
+                            className={`border rounded-xl p-4 hover:shadow-lg ${formData?.people === items.people ? 'shadow-xl border-black' : ''
                                 }`}
 
                         >
