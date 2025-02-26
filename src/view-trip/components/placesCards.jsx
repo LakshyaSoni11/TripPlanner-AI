@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function PlaceCards({places}) {
   return (
     <div className='flex gap-8 items-center border-2 rounded-3xl p-2 hover:scale-105 transition-all shadow-xl'>
-        <img src="/tripImg.png" className='h-60 rounded-3xl' alt="tripPhoto"/>
+        <img src="/hotelIcon.png" className='h-60 rounded-3xl' alt="tripPhoto"/>
         <div className=''>
             <h2 className='font-semibold text-2xl'>Place Name: <span className='text-fuchsia-600'>{places.placeName}</span></h2>
             <p className='font-semibold text-lg  '><span className='text-lg text-gray-700'>{places.placeDetails}</span></p>

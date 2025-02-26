@@ -25,7 +25,7 @@ const [userTrips , setUserTrips]= useState([]);
   };
 
 
-  return <div className='sm:px-10 md:px-32 xl:px-10   bg-[url(/backImg.jpg)] bg-center bg-cover'>
+  return <div className='sm:px-10 md:px-32 xl:px-10 '>
    
     <h2 className='font-bold text-5xl mb-10 flex items-center gap-2 '>My Trips  <FaTripadvisor /></h2>
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 '>

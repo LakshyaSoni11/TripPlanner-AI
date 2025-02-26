@@ -27,7 +27,7 @@ function ViewTrip() {
         }
     }
   return (
-    <div className='p-10 md:px-20 lg-px-40 xl:px-50 bg-[url(/hotelBg.jpg)] bg-cover bg-bottom bg-fixed'>
+    <div className='p-10 md:px-20 lg-px-40 xl:px-50 '>
     {/* information section here */}
     <InfoSection tripData={tripData}/>
     {/* hotels list  */}

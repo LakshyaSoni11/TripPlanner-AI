@@ -3,7 +3,7 @@ import { Button } from '../ui/button'
 import { Link } from 'react-router-dom'
 function Hero () {
   return ( 
-    <div className='flex flex-col items-center px-10 pt-20 bg-[url(/home.jpg)] bg-cover bg-center  gap-9'>
+    <div className='flex flex-col items-center px-10 pt-20   gap-9'>
         <h1
         className='font-extrabold text-[60px] text-center'
         ><span className='text-yellow-400'>Welcome to AI-Trip Planner – Your Smart Travel Companion! </span> 📍 Custom itineraries with top attractions, hotels, and travel tips  </h1>

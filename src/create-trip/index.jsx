@@ -111,7 +111,7 @@ function CreateTrip() {
     }, [formData]);
 
     return (
-        <div className='sm:px-10 md:px-32 xl:px-10 px-5 pt-20 bg-[url(/backImg.jpg)] bg-center bg-cover' >
+        <div className='sm:px-10 md:px-32 xl:px-10 px-5 pt-20' >
            <div className='text-center flex flex-col items-center justify-center gap-5 '>
            <h2 className='capitalize font-bold text-5xl'>Plan Your Dream Trip with Ease </h2>
            <p className='mt-5 text-gray-500 text-2xl '>Your perfect vacation, tailored to your budget and preferences. </p>
