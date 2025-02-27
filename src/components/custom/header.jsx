@@ -49,7 +49,7 @@ function Header() {
     });
   };
   return (
-    <div className='flex justify-between fixed w-full   shadow-2xl px-5 py-4'>
+    <div className='flex justify-between fixed w-full  shadow-2xl px-5 py-4'>
       <img src="/logo.svg" alt="logo" />
       <div className='ml-2'>
         {user ? (
