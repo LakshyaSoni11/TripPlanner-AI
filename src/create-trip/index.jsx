@@ -38,10 +38,12 @@ function CreateTrip() {
     const login = useGoogleLogin({
         onSuccess: (codeResp) => {
             console.log("Login Success:", codeResp);
-            GetUserProfile(codeResp); // Fetch user profile after login
+            GetUserProfile(codeResp);
         },
-        onError: (error) => console.error("Login Error:", error) // Proper error handling
+        onError: (error) => console.error("Login Error:", error),
+        redirect_uri: import.meta.env.VITE_GOOGLE_REDIRECT_URI, 
     });
+
 
     const onGenerateTrip = async () => {
         const user = localStorage.getItem('user');
@@ -95,12 +97,12 @@ function CreateTrip() {
                 Accept: 'application/json'
             }
         }).then((resp) => {
-            console.log("User Profile:", resp.data); 
+            console.log("User Profile:", resp.data);
             localStorage.setItem('user', JSON.stringify(resp.data));
             setOpenDilauge(false);
             onGenerateTrip();
         }).catch((error) => {
-            console.error("Error fetching user profile:", error); 
+            console.error("Error fetching user profile:", error);
         });
     };
 
@@ -110,18 +112,18 @@ function CreateTrip() {
 
     return (
         <div className='sm:px-10 md:px-32 xl:px-10 px-5 pt-20' >
-           <div className='text-center flex flex-col items-center justify-center gap-5 '>
-           <h2 className='capitalize font-bold text-5xl'>Plan Your Dream Trip with Ease </h2>
-           <p className='mt-5 text-gray-500 text-2xl '>Your perfect vacation, tailored to your budget and preferences. </p>
-            <div className='border-3 p-10 rounded-3xl shadow-2xl shadow-amber-300 border-transparent '>
-            <img src="/travelIcon.png"  className='w-250 ' alt="travel icon" />
+            <div className='text-center flex flex-col items-center justify-center gap-5 '>
+                <h2 className='capitalize font-bold text-5xl'>Plan Your Dream Trip with Ease </h2>
+                <p className='mt-5 text-gray-500 text-2xl '>Your perfect vacation, tailored to your budget and preferences. </p>
+                <div className='border-3 p-10 rounded-3xl shadow-2xl shadow-amber-300 border-transparent '>
+                    <img src="/travelIcon.png" className='w-250 ' alt="travel icon" />
 
+                </div>
             </div>
-           </div>
             <div className='mt-10 flex flex-col gap-[54px]'>
                 <div className=' p-3'>
                     <h2 className='font-bold my-5 text-3xl capitalize'>Where do you want to go?</h2>
-                
+
                     <input
                         type="text"
                         className='p-2 w-full rounded-md border-2 '
@@ -170,7 +172,7 @@ function CreateTrip() {
                             handleInputChange('people', items.people)
                             handleInputChange('name', items.name);
                         }}
-                            className={`border rounded-xl p-4 hover:shadow-lg ${formData?.people === items.people ? 'shadow-xl border-black'  : ''
+                            className={`border rounded-xl p-4 hover:shadow-lg ${formData?.people === items.people ? 'shadow-xl border-black' : ''
                                 }`}
 
                         >
